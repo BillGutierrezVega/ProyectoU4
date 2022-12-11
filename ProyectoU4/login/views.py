@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
+from django.contrib import messages
 
 from login.forms import UserLoginForm
+from login.forms import FormProyectoForm
 
 # Create your views here.
 # class LoginView(View):
@@ -23,3 +25,30 @@ from login.forms import UserLoginForm
 class Vistaindex(View):
     def get(self, request):
         return render(request, 'index.html')
+    
+    
+
+def form_proyecto(request):
+    form = FormProyectoForm(request.POST or None)
+    if form.is_valid():
+        form.save()		
+        messages.success(request, 'Proyecto insertado correctamente.')
+        form = FormProyectoForm()
+    else:
+        messages.error(request, 'Error al insertar un Proyecto. Revise los datos.')
+    context = {'form': form }      
+    return render(request, 'proyecto.html', context)
+
+class Form_proyecto(View):
+    def post(self, request):
+        form = FormProyectoForm(request.POST or None)
+        if form.is_valid():
+            form.save()		
+            messages.success(request, 'Proyecto insertado correctamente.')
+            form = FormProyectoForm()
+        else:
+            messages.error(request, 'Error al insertar un Proyecto. Revise los datos.')
+        context = {'form': form }      
+        return render(request, 'proyecto.html', context)
+    
+    

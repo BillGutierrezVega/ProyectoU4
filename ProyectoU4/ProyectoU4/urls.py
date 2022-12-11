@@ -18,9 +18,11 @@ from django.urls import path
 
 from login.views import Vistaindex
 #from login.views import LoginView
+from login.views import form_proyecto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('LoginView', LoginView.as_view(), name='LoginView'),
     path('', Vistaindex.as_view(), name='Vistaindex'),
+    path('regis', form_proyecto, name='regis'),
 ]
