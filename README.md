@@ -1,6 +1,6 @@
 # Proyecto final unidad 4
 
-_Creación de portafolio_
+_Creación de portafolio_(El cual se irá actualizando hasta el último día de entrega)
 
 ## Funcionalidades a desarrollar 🚀
 
