@@ -66,6 +66,6 @@ def registro(request):
             user = authenticate(username=formulario.cleaned_data['username'], password=formulario.changed_data['password1'])
             login(request, user)
             messages.success(request, 'Ususario registrado correctamente')
-            return redirect(to='Vistaindex')
+            return redirect('login:registroUsuario')
         data['form']= formulario
     return render(request, 'registration/registro.html', data)

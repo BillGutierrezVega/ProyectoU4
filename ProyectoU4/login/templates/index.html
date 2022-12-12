@@ -63,7 +63,7 @@
           <div class="navbar-nav font-weight-bold mx-auto py-0">
             <a href="{% url 'Vistaindex' %}" class="nav-item nav-link active">Inicio</a>
             <a href="about.html" class="nav-item nav-link">Proyectos</a>
-            <a href="class.html" class="nav-item nav-link">Contactenos</a>
+            <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
 
             <!-- Si el usuario esta autentificado -->
 
@@ -85,7 +85,8 @@
           </div>
           <a href="accounts/login" class="btn btn-primary px-4">Iniciar sesion</a> 
           &nbsp;&nbsp;&nbsp;
-          <a href="{% url 'regis' %}" class="btn btn-primary px-4">Añadir proyecto</a>
+          <a href="{% url 'regis' %}" class="btn btn-primary px-4">Añadir proyecto</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          {{ user.username | upper }}
         </div>
       </nav>
     </div>
