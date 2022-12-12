@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LoginView, logout_then_login
 
-from login.views import Vistaindex
+from login.views import Vistaindex, ListaProyectos
 #from login.views import LoginView
 from login.views import form_proyecto, registro
 
@@ -30,4 +30,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     #path('nombre22/', LoginView.as_view() ,name="nombre22")
     path('logout/', logout_then_login, name='logout'),
+    path('listado/', ListaProyectos.as_view(), name='listado'),
 ]

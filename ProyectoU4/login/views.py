@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.views import View
+from django.views.generic.list import ListView
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
+from login.models import FormProyecto
 from login.forms import UserLoginForm, FormularioUsusariCustom
 from login.forms import FormProyectoForm
 
@@ -69,3 +71,11 @@ def registro(request):
             return redirect('login:registroUsuario')
         data['form']= formulario
     return render(request, 'registration/registro.html', data)
+
+
+#listado de productos
+class ListaProyectos(ListView):
+    model = FormProyecto
+    template_name = 'index.html'
+    # Added query to limit amount of results
+    queryset = FormProyecto.objects.filter()[:30]

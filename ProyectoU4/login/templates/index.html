@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Favicon -->
     <link href="../static/img/favicon.ico" rel="icon" />
 
@@ -27,7 +27,10 @@
     <link href="../static/lib/flaticon/font/flaticon.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="../static/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
     <link href="../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -61,7 +64,9 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="{% url 'Vistaindex' %}" class="nav-item nav-link active">Inicio</a>
+            <a href="{% url 'Vistaindex' %}" class="nav-item nav-link active"
+              >Inicio</a
+            >
             <a href="about.html" class="nav-item nav-link">Proyectos</a>
             <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
 
@@ -83,10 +88,13 @@
             </div>
             <a href="contact.html" class="nav-item nav-link">Contact</a> -->
           </div>
-          <a href="accounts/login" class="btn btn-primary px-4">Iniciar sesion</a> 
+          <a href="accounts/login" class="btn btn-primary px-4"
+            >Iniciar sesion</a
+          >
           &nbsp;&nbsp;&nbsp;
-          <a href="{% url 'regis' %}" class="btn btn-primary px-4">Añadir proyecto</a>&nbsp;&nbsp;&nbsp;&nbsp;
-          {{ user.username | upper }}
+          <a href="{% url 'regis' %}" class="btn btn-primary px-4"
+            >Añadir proyecto</a
+          >&nbsp;&nbsp;&nbsp;&nbsp; {{ user.username | upper }}
         </div>
       </nav>
     </div>
@@ -96,9 +104,11 @@
     <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
       <div class="row align-items-center px-3">
         <div class="col-lg-6 text-center text-lg-left">
-          <h4 class="text-white mb-4 mt-5 mt-lg-0">Lista de proyectos en un solo portfolio</h4>
+          <h4 class="text-white mb-4 mt-5 mt-lg-0">
+            Lista de proyectos en un solo portfolio
+          </h4>
           <h1 class="display-3 font-weight-bold text-white">
-            Cree su proyecto con solo registrarte 
+            Cree su proyecto con solo registrarte
           </h1>
           <p class="text-white mb-4">
             Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
@@ -119,109 +129,10 @@
     <div class="container-fluid pt-5">
       <div class="container pb-3">
         <div class="row">
-
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Juego Ground</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Music and Dance</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Arts and Crafts</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Safe Transportation</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Healthy food</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Educational Tour</h4>
-                <p class="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
-                </p>
-              </div>
-            </div>
-          </div>
+          {% for object in object_list %}
+            <p>Titulo del proyecto es:  ({{ object.titulo_proyecto|upper }})</p> 
+                            algo es: {{ object.description_proyecto|upper }}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -351,7 +262,7 @@
       </div>
       <div
         class="container-fluid pt-5"
-        style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
+        style="border-top: 1px solid rgba(23, 162, 184, 0.2)"
       >
         <p class="m-0 text-center text-white">
           &copy;
@@ -374,17 +285,17 @@
     <a href="#" class="btn btn-primary p-3 back-to-top"
       ><i class="fa fa-angle-double-up"></i
     ></a>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
     <script src="../static/lib/easing/easing.min.js"></script>
     <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../static/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="../static/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="../static/mail/jqBootstrapValidation.min.js"></script>
     <script src="../static/mail/contact.js"></script>
 
     <!-- Template Javascript -->
