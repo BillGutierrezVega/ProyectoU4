@@ -7,3 +7,6 @@ class FormProyecto(models.Model):
     description_proyecto = models.TextField()
     tags = models.CharField(max_length=100)
     url_github = models.URLField(max_length=400)
+    
+    def __str__(self) -> str:
+        return self.titulo_proyecto

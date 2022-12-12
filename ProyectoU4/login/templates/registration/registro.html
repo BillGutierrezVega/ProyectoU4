@@ -15,13 +15,12 @@
             <div class="col-12 col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h2>Ingrese sus datos</h2>
+                        <h2>Registro de usuario</h2>
                         <hr>
                         <form action="" method="post">
                             {% csrf_token %}
                             {{ form | crispy }} <br>
-                            <a href="{% url 'Vistaindex' %}">Regresar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="{% url 'registroUsuario' %}">Registrarse</a>
+                            <a href="{% url 'Vistaindex' %}">Regresar</a>
                             <input type="submit" value="Enviar" class="btn btn-primary float-end">
                         </form>
                     </div>

@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 
 from login.models import FormProyecto
 
@@ -13,3 +14,7 @@ class FormProyectoForm(forms.ModelForm):
     class Meta:
         model = FormProyecto
         fields = ['foto','titulo_proyecto','description_proyecto','tags','url_github']
+        
+        
+class FormularioUsusariCustom(UserCreationForm):
+    pass

@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from django.contrib import messages
+from django.contrib.auth import authenticate, login
 
-from login.forms import UserLoginForm
+from login.forms import UserLoginForm, FormularioUsusariCustom
 from login.forms import FormProyectoForm
 
 # Create your views here.
@@ -51,4 +52,20 @@ class Form_proyecto(View):
         context = {'form': form }      
         return render(request, 'proyecto.html', context)
     
+
+
+def registro(request):
+    data = {
+        'form': FormularioUsusariCustom()
+    }
     
+    if request.method == 'POST':
+        formulario = FormularioUsusariCustom(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data['username'], password=formulario.changed_data['password1'])
+            login(request, user)
+            messages.success(request, 'Ususario registrado correctamente')
+            return redirect(to='Vistaindex')
+        data['form']= formulario
+    return render(request, 'registration/registro.html', data)
